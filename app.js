@@ -1,45 +1,42 @@
-const {leerArchivo}= require ("./modulos/archivos.js");
+const {leerArchivo}= require ("./modulos/leerYGuardar.js");
 const { argv } = require("process");
 const { guardarDatos } = require("./modulos/leerYGuardar.js");
 
 let archivo= leerArchivo;
 
-
-
-function calculadora (a, b, callback) {
-let resultado= callback(a,b)
-   callback =operacion;
-   let operacion
+function calculadora (cb,a, b) {
+ let resultado=cb(a,b)
+    let operacion= cb;   
     switch (operacion) {
-        case callback="suma":
+        case "suma":
          const sumar= require ("./modulos/suma.js");
             break;
-        case callback="resta":
+        case "resta":
          const restar= require ("./modulos/resta.js");  
             break;
-        case callback="multiplicacion":
+        case "multiplicacion":
          const multiplicacion= require("./modulos/multiplicacion.js");
             break; 
-        case callback="dividir":
+        case "dividir":
          const dividir= require("./modulos/division.js");
             break;                   
         default:
-         "ingrese una operacion de las siguientes opciones: suma/ resta/ multiplicar/dividir."
+         return "ingrese una operacion de las siguientes opciones: suma/ resta/ multiplicar/dividir."
             break;
-    } 
-    let objeto={
-        operacion :callback,
+            } 
+         let objeto={
+         operacion :callback,
     
-        resultado :resultado
-     }
-     variableLeerArchivo.push(objeto)
-     guardarDatos(variableLeerArchivo)
+         resultado :resultado
+         }
+      newLista.push(objeto)
+      guardarDatos(archivo)
 
     return resultado;
 }
-    let a =process.argv[2];
-    let b =process.argv[3];
-    let operacion =process.argv[4];
-//revisar
+    let a =+process.argv[3];
+    let b =+process.argv[4];
+    let operacion =process.argv[2];
+// //revisar
  
-console.log(calculadora())
+console.log (calculadora("suma",a,b))
