@@ -2,9 +2,11 @@ const {leerArchivo}= require ("./modulos/archivos.js");
 const { argv } = require("process");
 
 let archivo= leerArchivo;
+let a =process.argv[2];
+    let b =process.argv[3];
+    let operacion =process.argv[4];
 
 
-git
 function calculadora (a, b, callback) {
    callback =operacion;
     switch (operacion) {
@@ -26,9 +28,7 @@ function calculadora (a, b, callback) {
     }
     return callback;
 }
-    let a =process.argv[2];
-    let b =process.argv[3];
-    let operacion =process.argv[4];
+    
 //revisar
 
-console.log(calculadora())
+console.log(calculadora(a,b,operacion))
