@@ -1,0 +1,1 @@
+let multiplicacion = (a,b) => a*b;
