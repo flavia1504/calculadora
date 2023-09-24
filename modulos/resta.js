@@ -1,4 +1,4 @@
 let resta= (a,b)=> a - b;
 
 
-module.exports =resta
+module.exports =resta()
