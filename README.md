@@ -1,5 +1,5 @@
-integrantes 
-valeria castillo
-jorge segura
-david de leon
-flavia fernandez
+Integrantes: 
+Valeria Castillo
+Flavia Fernandez
+Jorge Segura
+David de Leon
