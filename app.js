@@ -11,10 +11,10 @@ let b= parseInt(process.argv[3])
 let operacion = process.argv[4]
 
 
-let { sumar } = require("./modulos/suma.js");
-let { resta } = require("./modulos/resta.js");
-let { multiplicacion } = require("./modulos/multiplicacion.js");
-let { division } = require("./modulos/division.js");
+let { sumar } = require("./modulos/operaciones/suma.js");
+let { resta } = require("./modulos/operaciones/resta.js");
+let { multiplicacion } = require("./modulos/operaciones/multiplicacion.js");
+let { division } = require("./modulos/operaciones/division.js");
 
 
 
