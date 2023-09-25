@@ -1,5 +1,5 @@
 const fs = require("fs");
-const path = "../data/archivo.json"
+const path = "./data/archivo.json"
 function leerArchivo() {
   const json = fs.readFileSync(path, "utf-8");
   const array = JSON.parse(json);

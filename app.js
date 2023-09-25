@@ -1,45 +1,57 @@
-const {leerArchivo}= require ("./modulos/archivos.js");
-const { argv } = require("process");
-const { guardarDatos } = require("./modulos/leerYGuardar.js");
-
-let archivo= leerArchivo;
+const {leerArchivo, guardarDatos}= require ("./modulos/leerYGuardar");
 
 
+let archivo = leerArchivo();
 
-function calculadora (a, b, callback) {
-let resultado= callback(a,b)
-   callback =operacion;
-   let operacion
+
+let a= parseInt(process.argv[2])
+
+let b= parseInt(process.argv[3])
+
+let operacion = process.argv[4]
+
+
+let { sumar } = require("./modulos/suma.js");
+let { resta } = require("./modulos/resta.js");
+let { multiplicacion } = require("./modulos/multiplicacion.js");
+let { division } = require("./modulos/division.js");
+
+
+
+function calculadora(a, b, operacion) {
+
+  
     switch (operacion) {
-        case callback="suma":
-         const sumar= require ("./modulos/suma.js");
-            break;
-        case callback="resta":
-         const restar= require ("./modulos/resta.js");  
-            break;
-        case callback="multiplicacion":
-         const multiplicacion= require("./modulos/multiplicacion.js");
-            break; 
-        case callback="dividir":
-         const dividir= require("./modulos/division.js");
-            break;                   
-        default:
-         "ingrese una operacion de las siguientes opciones: suma/ resta/ multiplicar/dividir."
-            break;
-    } 
-    let objeto={
-        operacion :callback,
-    
-        resultado :resultado
-     }
-     variableLeerArchivo.push(objeto)
-     guardarDatos(variableLeerArchivo)
-
-    return resultado;
+    case "suma":
+      return sumar(a, b);
+      break;
+    case "resta":
+      return resta(a, b);
+      break;
+    case "multiplicacion":
+      return multiplicacion(a, b);
+      break;
+    case "dividir":
+      return division(a, b);
+      break;
+    default:
+      return "ingrese una operacion de las siguientes opciones: suma/ resta/ multiplicar/dividir.";
+      break;
+  }
 }
-    let a =process.argv[2];
-    let b =process.argv[3];
-    let operacion =process.argv[4];
+let objeto={
+        operacion : operacion,
+    
+        resultado :calculadora(a,b,operacion)
+     }
+    archivo.push(objeto)
+     guardarDatos(archivo)
+
+   
+
+
 //revisar
- 
-console.log(calculadora())
+
+console.log(calculadora(a, b, operacion));
+console.log(archivo)
+
