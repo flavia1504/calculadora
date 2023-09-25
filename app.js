@@ -11,14 +11,16 @@ let b= parseInt(process.argv[3])
 let operacion = process.argv[4]
 
 
-let { sumar } = require("./modulos/suma.js");
-let { resta } = require("./modulos/resta.js");
-let { multiplicacion } = require("./modulos/multiplicacion.js");
-let { division } = require("./modulos/division.js");
+let { sumar } = require("./modulos/operaciones/suma.js");
+let { resta } = require("./modulos/operaciones/resta.js");
+let { multiplicacion } = require("./modulos/operaciones/multiplicacion.js");
+let { division } = require("./modulos/operaciones/division.js");
 
 
 
-function calculadora(a,b,operacion) {
+function calculadora(a, b, operacion) {
+    
+  operacion = operacion.toLowerCase();
   
     switch (operacion) {
     case "suma":
@@ -47,9 +49,14 @@ let objeto={
         operacion : operacion,
     
         resultado :calculadora(a,b,operacion)
-     }
+    }
     archivo.push(objeto)
-     guardarDatos(archivo) 
+     guardarDatos(archivo)
+
+   
+
+
+//revisar
 
 console.log(calculadora(a, b, operacion));
 console.log(archivo)
