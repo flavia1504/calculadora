@@ -18,36 +18,33 @@ let { division } = require("./modulos/division.js");
 
 
 
-function calculadora (a, b, callback) {
-
-   callback =operacion;
-   let operacion
+function calculadora(a, b, operacion) {
+  
     switch (operacion) {
-        case callback="suma":
-         const sumar= require ("./modulos/suma.js");
-            break;
-        case callback="resta":
-         const restar= require ("./modulos/resta.js");  
-            break;
-        case callback="multiplicacion":
-         const multiplicacion= require("./modulos/multiplicacion.js");
-            break; 
-        case callback="dividir":
-         const dividir= require("./modulos/division.js");
-            break;                   
-        default:
-         "ingrese una operacion de las siguientes opciones: suma/ resta/ multiplicar/dividir."
-            break;
-    } 
-    let objeto={
-        operacion :callback,
-    
-        resultado :calculadora(cb,a,b)
-     }
-     variableLeerArchivo.push(objeto)
-     guardarDatos(variableLeerArchivo)
-
-    return resultado;
+    case "suma":
+      return sumar(a, b);
+      break;
+    case "resta":
+      return resta(a, b);
+      break;
+    case "multiplicacion":
+      return multiplicacion(a, b);
+      break;
+    case "dividir":
+      return division(a, b);
+      break;
+    default:
+      return "ingrese una operacion de las siguientes opciones: suma/ resta/ multiplicar/dividir.";
+      break;
+  }
 }
- 
-console.log(calculadora())
+let objeto={
+        operacion : operacion,
+    
+        resultado :calculadora(a,b,operacion)
+     }
+    archivo.push(objeto)
+     guardarDatos(archivo) 
+
+console.log(calculadora(a, b, operacion));
+console.log(archivo)
