@@ -1,1 +1,46 @@
-[{"operancion":"resta","resultado":23},{"operacion":"resta","resultado":2},{"operacion":"10","resultado":"ingrese una operacion de las siguientes opciones: suma/ resta/ multiplicar/dividir."},{"operacion":"10","resultado":"ingrese una operacion de las siguientes opciones: suma/ resta/ multiplicar/dividir."}]
+[
+    {
+        "operancion": "resta",
+        "resultado": 23
+    },
+    {
+        "operacion": "resta",
+        "resultado": 2
+    },
+    {
+        "operacion": "10",
+        "resultado": "ingrese una operacion de las siguientes opciones: suma/ resta/ multiplicar/dividir."
+    },
+    {
+        "operacion": "10",
+        "resultado": "ingrese una operacion de las siguientes opciones: suma/ resta/ multiplicar/dividir."
+    },
+    {
+        "operacion": "2",
+        "resultado": "ingrese una operacion de las siguientes opciones: suma/ resta/ multiplicar/dividir."
+    },
+    {
+        "operacion": "suma",
+        "resultado": 30
+    },
+    {
+        "operacion": "multiplicar",
+        "resultado": "ingrese una operacion de las siguientes opciones: suma/ resta/ multiplicar/dividir."
+    },
+    {
+        "operacion": "multiplicacion",
+        "resultado": 200
+    },
+    {
+        "operacion": "division",
+        "resultado": "ingrese una operacion de las siguientes opciones: suma/ resta/ multiplicar/dividir."
+    },
+    {
+        "operacion": "dividir",
+        "resultado": 2
+    },
+    {
+        "operacion": "resta",
+        "resultado": 10
+    }
+]
