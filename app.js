@@ -18,7 +18,7 @@ let { division } = require("./modulos/division.js");
 
 
 
-function calculadora(a, b, operacion) {
+function calculadora(a,b,operacion) {
   
     switch (operacion) {
     case "suma":
