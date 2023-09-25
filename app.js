@@ -1,42 +1,57 @@
-const {leerArchivo}= require ("./modulos/leerYGuardar.js");
-const { argv } = require("process");
-const { guardarDatos } = require("./modulos/leerYGuardar.js");
+const {leerArchivo, guardarDatos}= require ("./modulos/leerYGuardar");
 
-let archivo= leerArchivo;
 
-function calculadora (cb,a, b) {
- let resultado=cb(a,b)
-    let operacion= cb;   
+let archivo = leerArchivo();
+
+
+let a= parseInt(process.argv[2])
+
+let b= parseInt(process.argv[3])
+
+let operacion = process.argv[4]
+
+
+let { sumar } = require("./modulos/suma.js");
+let { resta } = require("./modulos/resta.js");
+let { multiplicacion } = require("./modulos/multiplicacion.js");
+let { division } = require("./modulos/division.js");
+
+
+
+function calculadora (a, b, callback) {
+let resultado= callback(a,b)
+   callback =operacion;
+   let operacion
     switch (operacion) {
-        case "suma":
+        case callback="suma":
          const sumar= require ("./modulos/suma.js");
             break;
-        case "resta":
+        case callback="resta":
          const restar= require ("./modulos/resta.js");  
             break;
-        case "multiplicacion":
+        case callback="multiplicacion":
          const multiplicacion= require("./modulos/multiplicacion.js");
             break; 
-        case "dividir":
+        case callback="dividir":
          const dividir= require("./modulos/division.js");
             break;                   
         default:
-         return "ingrese una operacion de las siguientes opciones: suma/ resta/ multiplicar/dividir."
+         "ingrese una operacion de las siguientes opciones: suma/ resta/ multiplicar/dividir."
             break;
-            } 
-         let objeto={
-         operacion :callback,
+    } 
+    let objeto={
+        operacion :callback,
     
-         resultado :resultado
-         }
-      newLista.push(objeto)
-      guardarDatos(archivo)
+        resultado :resultado
+     }
+     variableLeerArchivo.push(objeto)
+     guardarDatos(variableLeerArchivo)
 
     return resultado;
 }
-    let a =+process.argv[3];
-    let b =+process.argv[4];
-    let operacion =process.argv[2];
-// //revisar
+    let a =process.argv[2];
+    let b =process.argv[3];
+    let operacion =process.argv[4];
+//revisar
  
-console.log (calculadora("suma",a,b))
+console.log(calculadora())
