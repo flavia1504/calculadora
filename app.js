@@ -49,9 +49,5 @@ let resultado= callback(a,b)
 
     return resultado;
 }
-    let a =process.argv[2];
-    let b =process.argv[3];
-    let operacion =process.argv[4];
-//revisar
  
 console.log(calculadora())
