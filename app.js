@@ -20,7 +20,8 @@ let { division } = require("./modulos/division.js");
 
 function calculadora(a, b, operacion) {
 
-  
+  operacion = operacion.toLowerCase();
+
     switch (operacion) {
     case "suma":
       return sumar(a, b);
@@ -43,11 +44,9 @@ let objeto={
         operacion : operacion,
     
         resultado :calculadora(a,b,operacion)
-     }
+    }
     archivo.push(objeto)
-     guardarDatos(archivo)
-
-   
+    guardarDatos(archivo)
 
 
 //revisar
