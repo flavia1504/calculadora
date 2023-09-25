@@ -32,7 +32,7 @@ function calculadora(a, b, operacion) {
     case "multiplicacion":
       return multiplicacion(a, b);
       break;
-    case "dividir":
+    case "division":
       if(b!=0){
 return division(a, b);
       }else{
@@ -41,7 +41,7 @@ return "No se puede dividir por 0"
       
       break;
     default:
-      return "ingrese una operacion de las siguientes opciones: suma/ resta/ multiplicar/dividir.";
+      return "ingrese una operacion de las siguientes opciones: suma/ resta/ multiplicacion/division.";
       break;
   }
 }
