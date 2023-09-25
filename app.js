@@ -19,7 +19,7 @@ let { division } = require("./modulos/division.js");
 
 
 function calculadora (a, b, callback) {
-let resultado= callback(a,b)
+
    callback =operacion;
    let operacion
     switch (operacion) {
@@ -42,7 +42,7 @@ let resultado= callback(a,b)
     let objeto={
         operacion :callback,
     
-        resultado :resultado
+        resultado :calculadora(cb,a,b)
      }
      variableLeerArchivo.push(objeto)
      guardarDatos(variableLeerArchivo)
