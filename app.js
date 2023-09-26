@@ -19,8 +19,7 @@ let { division } = require("./modulos/operaciones/division.js");
 
 
 function calculadora(a, b, operacion) {
-    
-  operacion = operacion.toLowerCase();
+  // operacion = operacion.tolowerCase();
   
     switch (operacion) {
     case "suma":
@@ -40,8 +39,11 @@ return "No se puede dividir por 0"
       }
       
       break;
-    default:
-      return "ingrese una operacion de las siguientes opciones: suma/ resta/ multiplicacion/division.";
+    case "historial" : return require ("./modulos/leerYGuardar");
+      break;
+
+      default:
+      return "ingrese una de las siguientes opciones:suma/resta/multiplicacion/division/historial";
       break;
   }
 }
@@ -51,9 +53,7 @@ let objeto={
         resultado :calculadora(a,b,operacion)
     }
     archivo.push(objeto)
-     guardarDatos(archivo)
-
-   
+    guardarDatos(archivo)
 
 
 //revisar
